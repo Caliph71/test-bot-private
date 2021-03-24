@@ -10,7 +10,7 @@ const uploadFile = require('../lib/uploadFile')
       let img = await q.download()
       if (!img) throw 'Foto/Video tidak ditemukan'
       try {
-      urlfile = await upimg(fs.readFileSync(img))
+      urlfile = await uploadImage(img)
       m.reply(urlfile)
       } catch (e) {
       m.reply(`${e}`)
