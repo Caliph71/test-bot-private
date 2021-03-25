@@ -2,7 +2,7 @@ let handler = async (m, { conn, text }) => {
 m.reply(`
 Informations About Me
 
-➠ Name : ${getName(conn.user.jid)}
+➠ Name : ${conn.getName(conn.user.jid)}
 ➠ Developer : Caliph
 ➠ Language : Node.js
 ➠ Framework : Baileys
