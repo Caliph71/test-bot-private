@@ -1,6 +1,5 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(`https://recoders-area.herokuapp.com/api/random/meme?apikey=FreeApi`)
   let json = await res.json()
   conn.sendFile(m.chat, json.result.url, `meme.${json.result.url.split('.')[1]}`, `${json.result.title}`, m, false)
