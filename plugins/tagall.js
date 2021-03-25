@@ -1,6 +1,6 @@
 let { MessageType } = require('@adiwajshing/baileys')
 
-let handler = async (m, { conn, text, participants }) => {
+let handler = async (m, { conn, text, participants, args }) => {
   let users = participants.map(u => u.jid)
  teks = (args.length > 1) ? args.join(' ').trim() : ''
  teks += `  Total : ${users.length}\n`
